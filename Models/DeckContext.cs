@@ -1,0 +1,26 @@
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace Project2.Models
+{
+    public class DeckContext : DbContext
+    {
+        public DeckContext(DbContextOptions<DeckContext> options)
+            : base(options)
+        { }
+
+        public DbSet<Deck> Decks { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Deck>().HasData(
+                new Deck
+                {
+                    DeckID = 1,
+                    DeckName = "Rider-Waite Tarot", 
+                    DeckCount = 78
+                }
+                );
+
+        }
+    }
+}
