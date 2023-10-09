@@ -18,6 +18,12 @@ namespace Project2.Models
                     DeckID = 1,
                     DeckName = "Rider-Waite Tarot", 
                     DeckCount = 78
+                },
+                new Deck
+                {
+                    DeckID = 2,
+                    DeckName = "Standard",
+                    DeckCount = 52
                 }
                 );
 
