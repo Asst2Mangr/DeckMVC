@@ -9,21 +9,20 @@
     <thead>
         <tr><th>Name</th><th>Count</th></tr>
     </thead>
-    <tbody>
+        <tbody>
         @foreach (var deck in Model)
         {
             <tr>
                 <td>@deck.DeckName</td>
                 <td>@deck.DeckCount</td>
+
+                <td>
+                    <a asp-controller="Deck" asp-action="Edit"
+                       asp-route-id="@deck.DeckID">Edit</a>
+                    <a asp-controller="Deck" asp-action="Delete"
+                       asp-route-id="@deck.DeckID">Delete</a>
+                </td>
             </tr>
-            <td>
-            <a asp-controller="Deck" asp-action="Edit"
-               asp-route-id="@deck.DeckID"
-               asp-route-slug="@deck.Slug">Edit</a>
-            <a asp-controller="Deck" asp-action="Delete"
-               asp-route-id="@deck.DeckID"
-               asp-route-slug="@deck.Slug">Delete</a>
-            </td>
         }
-    </tbody>
+       </tbody>
 </table>
