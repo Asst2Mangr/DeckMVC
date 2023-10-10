@@ -16,7 +16,7 @@ namespace Project2.Controllers
         public IActionResult Index()
         {
             var Decks = context.Decks
-                .OrderBy(m => m.DeckName)
+                .OrderBy(d => d.DeckName)
                 .ToList();
             return View(Decks);
         }
