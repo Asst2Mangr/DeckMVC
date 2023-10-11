@@ -24,6 +24,12 @@ namespace Project2.Models
                     DeckID = 2,
                     DeckName = "Standard",
                     DeckCount = 52
+                },
+                new Deck
+                {
+                     DeckID = 3,
+                     DeckName = "another one",
+                     DeckCount = 100
                 }
                 );
 

@@ -11,7 +11,7 @@ using Project2.Models;
 namespace Project2.Migrations
 {
     [DbContext(typeof(DeckContext))]
-    [Migration("20231008151154_Initial")]
+    [Migration("20231011151752_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -49,6 +49,18 @@ namespace Project2.Migrations
                             DeckID = 1,
                             DeckCount = 78,
                             DeckName = "Rider-Waite Tarot"
+                        },
+                        new
+                        {
+                            DeckID = 2,
+                            DeckCount = 52,
+                            DeckName = "Standard"
+                        },
+                        new
+                        {
+                            DeckID = 3,
+                            DeckCount = 100,
+                            DeckName = "another one"
                         });
                 });
 #pragma warning restore 612, 618

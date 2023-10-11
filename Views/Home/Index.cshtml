@@ -5,9 +5,9 @@
 
 <h2>Deck List</h2>
 <a asp-controller="Deck" asp-action="Add">Add New Deck</a>
-<table class="table table-bordered table-striped">
+<table class="table table-striped table-dark">
     <thead>
-        <tr><th>Name</th><th>Count</th></tr>
+        <tr><th>Name</th><th>Count</th><th></th></tr>
     </thead>
         <tbody>
         @foreach (var deck in Model)
